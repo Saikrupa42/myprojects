@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+        *{
+            margin: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .containor{
+            display: flex;
+        }
+        .content{
+            height: 100%;
+            width: 100%;
+            margin-left: 300px;
+            background-color: #FFFFFF;
+            background-image: linear-gradient(180deg, #FFFFFF 0%, #62f2ff 50%, #e1ff00 100%);
+            /* background-image: url();
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: 150px;
+            background-attachment: fixed; */
+
+        }
+        .nav-bar{
+            position: fixed;
+            top: 0;
+            height: 750px;
+            width: 300px;
+            background-color:black;
+            text-decoration: none;
+        }
+        .nav-image img{
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+        }
+        .nav-image{
+            margin-top: 35px;
+            margin-left: 50px;
+        }
+        .nav-items a{
+            text-decoration: none;
+            font-size: 30px;
+            line-height: 70px;
+            font-family:'Times New Roman', Times, serif;
+            color:aqua;
+            font-weight: 700;
+        
+        }
+        .nav-items li{
+            height: 50px;
+            color: rgb(252, 254, 254);
+            border-radius: 10px;
+            margin-left: 30px;
+            margin-right: 50px;
+            margin-top: 20px;
+            /* opacity: 0.4; */
+            /* text-decoration: none; */
+        
+        }
+        .nav-items ul{
+            list-style-type: none;
+            padding-left: 50px;
+            margin-top: 50px;
+            
+        }
+        .nav-items a:hover{
+            text-decoration: none;
+            color:#6284FF;
+        }
+        h1{
+            color: aquamarine;
+        }
+        .content-name{
+            display: inline-block;
+            text-transform: uppercase;
+            background-image: linear-gradient(20deg, rgb(30, 0, 255) , rgb(238, 255, 0) ,green);
+            background-size:auto auto;
+            background-clip: text;
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: 100% auto;
+            animation: animtext 3s normal infinite;
+            margin-left: 55px;
+            margin-top: 10px;
+        }
+        .content-name h2{
+            margin-left: 30px;
+            margin-top: 45px;
+        }
+        @keyframes animtext{
+            to{
+                background-position: 100% center;
+            }
+        }
+        .content-text p{
+            margin-left: 50px;
+            font-size: 35px;
+            /* height: 200px;
+            width: 600px; */
+            margin-top: 100px;
+            font-style:italic;
+        }
+        .home-content{
+            display: flex;
+            background-color:gray;
+            width: 95%;
+            height: 700px;
+            margin-top: 20px;
+            margin-left: 10px;
+            border-radius: 20px;
+            border: solid;
+        }
+        .home-image img{
+            width: 300px; 
+            height:500px;
+            /* border-radius: 50px; */
+            margin-right: 50px;
+            margin-top: 60px;
+            margin-left: 30px;
+        }
+        .content-name h1{
+            font-size: 60px;
+            margin-top: 100px;
+        }
+        .qal h2{
+            margin-left: 30px;
+            /* text-decoration: underline; */
+            font-size: 50px;
+            color:rgb(221, 190, 17);
+            font-family:'Times New Roman', Times, serif;
+        }
+       .qal h2:hover{
+            /* text-decoration: underline;
+            color:blue; 
+        }
+        .qal-details li{
+            font-size: 25px;
+            font-weight: 700;
+            color:black;
+            line-height: 50px;
+        }
+        .skills h2{
+            /* margin-top: 120px; */
+            font-size: 50px;
+            color:rgb(221, 190, 17);
+        }
+        .contact h2{
+            color: rgb(221, 190, 17);
+            font-size: 50px;
+            position: relative;
+            bottom: 10px;
+        }
+        .contact h2:hover{
+            text-decoration: underline;
+            color:#6284FF;
+        }
+        .contact a img{
+            width: 5%;
+            margin-left: 50px;
+        }
+        .qal{
+            /* display: flex; */
+            /* align-items: center; */
+            width:95%;
+            background-color:gray;
+            margin-left: 10px;
+            margin-top: 50px;
+            height: 500px;
+            border: solid;
+            border-radius: 20px;
+        }
+        .qal-details ul{
+            margin-left: 10px;
+        }
+        .qal-details table{
+            width:95%;
+        }
+        .qual-left{
+            font-size: 25px;
+            font-weight: 700;
+        }
+        .qual-right{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .skills h4{
+            font-size: 25px;
+            line-height: 50px;
+        }
+        .skills h2{
+            font-size:50px ;
+            color:rgb(221, 190, 17);
+        }
+        .skills li{
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 400;
+        }
+        .skills{
+            margin-left: 10px;
+            background-color:gray;
+            border: solid;
+            margin-top: 50px;
+            border-radius: 20px;
+            width: 95%;
+            /* height: 700px; */
+        }
+        .skl{
+            margin-left: 30px;
+        }
+        .project{
+            margin-left: 10px;
+            background-color:gray;
+            border: solid;
+            margin-top: 50px;
+            border-radius: 20px;
+            width: 95%;
+        }
+        .project li{
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 400;
+        } 
+        .project h2{
+            font-size: 50px;
+            color:rgb(221, 190, 17);
+        } 
+        .project h4{
+            font-size: 25px;
+            line-height: 50px;
+        } 
+        .project .non-aca{
+            margin-top: 35px;
+        }
+        .prj{
+            margin-left: 30px;
+        }  
+        .contact{
+            margin-left: 10px;
+            background-color:gray;
+            border: solid;
+            margin-top: 50px;
+            border-radius: 20px;
+            width: 95%;   
+          
+        }
+        #cnt{
+            text-decoration: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="containor">
+<!-- nav bar starts -->
+        <div class="nav-bar">
+            <div class="nav-image">
+                <img src="images/somu2.jpg" alt="">
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#qual">Qualification</a></li>
+                    <li><a href="#skl">Skills</a></li>
+                    <li><a href="#prj">Projects</a></li>
+                    <!-- <li><a href="#info">Info</a></li> -->
+                    <li><a href="#cnt">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+<!-- nav bar ends -->
+<!-- content starts -->
+        <div class="content">
+            <div class="home-content" id="home">
+                <div class="home">
+                    <div class="content-name">
+                        <h1>SOMA SEKHAR</h1>
+                        <h2>PYTHON FULL STACK DEVELOPER</h2>
+                    </div>
+                    <div class="content-text">
+                        <p>I am from Anantapur, Andhra Pradesh. I have completed my graduation Diploma in Computer Engg.</p>
+                    </div>
+                </div>
+                <div class="home-image">
+                    <img src="images/somu.jpg" alt="">
+                </div>
+            </div>
+<!-- Qualification Starts -->
+            <div class="qal">
+                <h2 id="qual">QUALIFICATION :</h2>
+                <div class="qal-details">
+                    <ul>
+                        <li>DIPLOMA:</li>
+                            <table border="5px" cellspacing="2px" cellpadding="10px">
+                                <tr>
+                                    <td class="qual-left">COLLEGE </td>
+                                    <td class="qual-right">BIT Institute of Technology ,Hindupur</td>
+                                </tr>
+                                <tr>
+                                    <td class="qual-left">BRANCH </td>
+                                    <td class="qual-right">Compute Science and Engineering</td>
+                                </tr>
+                                <tr>
+                                    <td class="qual-left">CGPA </td>
+                                    <td class="qual-right">79%</td>
+                                </tr>
+                            </table>
+                            <li>SSLC :</li>
+                            <table border="5px" cellspacing="2px" cellpadding="10px">
+                                <tr>
+                                    <td class="qual-left">SCHOOL </td>
+                                    <td class="qual-right">SPMR ZPH School , Mahammadabad</td>
+                                </tr>
+                                <!-- <tr>
+                                    <td class="qual-left">BRANCH </td>
+                                    <td class="qual-right">PCMB</td>
+                                </tr> -->
+                                <tr>
+                                    <td class="qual-left">PERCENTAGE </td>
+                                    <td class="qual-right">97%</td>
+                                </tr>
+
+                            </table>
+                            <!-- <li>SSLC :</li> -->
+                            <!-- <table border="5px" cellspacing=2px" cellpadding="10px">
+                                <tr>
+                                    <td class="qual-left">SCHOOL </td>
+                                    <td class="qual-right">Concordia Higher Secondary School ,Bargur.</td>
+                                </tr>
+                                <tr>
+                                    <td class="qual-left">PERCENTAGE </td>
+                                    <td class="qual-right">89%</td>
+                                </tr>
+                            </table> -->
+                    </ul>
+                </div>
+            </div>
+<!-- Qualification ends -->
+<!-- Skills starts -->
+            <div class="skills">
+                <div class="skl">
+                <h2 id="skl">SKILLS :</h2>
+                <h4>PYTHON</h4>
+                <ul>
+                    <li>Data types</li>
+                    <li>Variables</li>
+                    <li>Control statements</li>
+                    <li>Functions</li>
+                </ul>
+                <h4>HTML </h4>
+                <ul>
+                    <li>Tags & Attributes</li>
+                    <li>HTML List</li>
+                    <li>HTML Table</li>
+                    <li>HTML form</li>
+                </ul>
+                <h4>CSS</h4>
+                <ul>
+                    <li>Box model</li>
+                    <li>Selectors</li>
+                    <li>Combinators</li>
+                    <li>Pseudo-class</li>
+                    <li>Pseudo-elements</li>
+                    <li>Display and Position properties</li>
+                    <li>Transform and animation</li>
+                </ul>
+                <h4>SQL</h4>
+                <ul>
+                    <li>Data types</li>
+                    <li>Constraints</li>
+                    <li>SQL statements</li>
+                    <ul>
+                        <li>DDL</li>
+                        <li>DML</li>
+                        <li>DCL</li>
+                        <li>TCL</li>
+                        <li>DQL</li>
+                    </ul>
+                </ul>
+                </div>
+            </div>
+<!-- Skills ends -->
+<!-- Project starts -->
+            <div class="project">
+                <div class="prj">
+                <h2 id="prj">PROJECTS</h2>
+                <h4>ACADEMIC PROJECTS :</h4>
+                <ul>
+                    <li>Study of effect of surface roughness parameter on fiber reignforced composite.</li>
+                </ul>
+                <h4 class="non-aca">NON ACADEMIC PROJECTS :</h4>
+                <ul>
+                    <li>Disney plus Hotstar clone</li>
+                    <li>Portfolio</li>
+                    <li>Restaurent</li>
+                    <li>NewsPaper</li>
+                    <li>Musicplayer</li>
+                </ul>
+                </div>
+            </div>
+<!-- Project ends -->
+<!-- Info starts -->
+            <!-- <div class="info">
+                <h2 id="info">Info</h2>
+            </div> -->
+<!-- Info ends -->
+<!-- Contact starts -->
+            <div class="contact">
+                <h2 id="cnt">Contact</h2>
+                <a href="https://www.instagram.com/"><img src="https://www.nicepng.com/png/full/4-41495_icon-transparent-background-png-facebook-twitter-instagram-png.png" alt=""></a>
+                <a href="https://www.whatsapp.com/"><img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-mobile-software-icon-png-image_6315991.png" alt=""></a>
+                
+                <a href="https://mail.google.com/mail/"><img src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" alt=""></a>
+                               <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjNr83ynPv9AhV5mWYCHUOODnEYABAAGgJzbQ&ohost=www.google.com&cid=CAESauD2NdtUYNdGWtNBkOlvKo9yP0Fd9zQaFMdtH2qrTGxYiQ9Hcgn_sx74kbFFwR11HL2sfqpJFg-i0Ue5hGgN7_IekJu0jUi3jU1jEaEn5jcHRe7naRasdydQULeUD9Wx_EKijmm65DGGaN8&sig=AOD64_0pgdaFehTE2oS_TqkTmVtsLpuIUw&q&adurl&ved=2ahUKEwil8cbynPv9AhXASWwGHe2MAHkQ0Qx6BAgJEAE"><img src="https://png.pngtree.com/element_our/png/20181015/facebook-logo-icon-design-vector-png_124139.jpg" alt=""></a>
+
+                
+            </div>
+<!-- Contact ends -->
+
+        </div>
+<!-- content ends -->
+    </div>
+</body>
+</html>
